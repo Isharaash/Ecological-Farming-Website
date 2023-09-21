@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My HTML Page</title>
+</head>
+<body>
+
+    <form id="form1" name="registration" method="post" action="Reginsert.php" onSubmit="return formValidation();">
+        <ul>
+     <label for="fname"> First Name:</label>
+     <input type="text" name="fname" placeholder="First Name" /> <br><br>
+     
+     <label for="fname"> Last Name:</label>
+     <input type="text" name="lname" placeholder="Last Name" /><br><br>
+     
+    <label for="fname">Country:</label>
+     <input type="text" name="country" placeholder="Country"/><br><br>
+     
+    <label for="email">Email:</label>
+     <input type="text" name="email" placeholder="Email" /><br><br>
+     
+     <label for="Password">Password:</label>
+     <input type="password" name="password" placeholder="Password"/><br><br>
+     
+     <label for="role">Role:</label>
+     <select name="role" required>
+   <option value="Farmers">Farmers</option>
+   <option value="Field Officers">Field Officers</option>
+   <option value="Admin">Admin</option>
+   </select><br><br>
+    
+     
+ 
+     <input type="submit" name="submit" value="Submit" />     </div>
+     </ul>
+     
+         <div class="login">
+             Go To Login.  <a href="loging.php">Login</a>
+                 </div>
+     
+     </form>
+
+
+
+</body>
+</html>
