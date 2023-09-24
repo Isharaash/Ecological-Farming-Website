@@ -9,21 +9,32 @@ if (count($_POST) > 0) {
     $email = $_POST["email"];
     $password = md5($_POST["password"]);
 
-    $sql = "SELECT email, role FROM register WHERE email='$email' AND password='$password'";
+    $sql = "SELECT email, role, fname, lname FROM register WHERE email='$email' AND password='$password'";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) == 1) {
         // User authentication successful
         $row = mysqli_fetch_assoc($result);
         $_SESSION['email'] = $row['email'];
-        $_SESSION['role'] = $row['role']; // Assuming 'role' is the column for user roles
+        $_SESSION['role'] = $row['role'];
+        $_SESSION['fname'] = $row['fname'];
+        $_SESSION['lname'] = $row['lname']; // Assuming 'role' is the column for user roles
 
         // Redirect based on the user's role
         if ($row['role'] === 'Admin') {
-            header("location: Admin.html"); // Redirect to the admin page
-        } else {
-            header("location: User.html"); // Redirect to the user page
+          
+        
+            header("location: Admin.php"); 
         }
+
+     else if ($row['role'] === 'Field Officers') {
+        header("location: Field Officers.php");
+     }
+
+      else if ($row['role'] === 'Farmers') {
+         header("location: Farmers.php");
+
+} 
     } else {
         $msg = "Your Login Name or Password is invalid";
     }
