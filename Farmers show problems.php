@@ -39,7 +39,7 @@
             } else {
                 echo '<em>No reply yet.</em><br>';
             }
-            echo '<a href="#" class="question-link" data-question-id="' . $questionId . '">Select</a>';
+          
             echo '</li>';
         }
 
@@ -48,27 +48,5 @@
         ?>
     </ul>
 
-    <!-- Admin Reply Form -->
-    <h2>Admin Reply</h2>
-    <form action="admin_reply.php" method="post">
-      <input type="number" name="question_id" id="question_id" style="display: none;"><br>
-        Reply: <textarea name="reply_text"></textarea><br>
-        <input type="submit" value="Submit Reply">
-    </form>
-
-    <script>
-        // Get all question links
-        const questionLinks = document.querySelectorAll('.question-link');
-
-        // Add click event listeners to each question link
-        questionLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const questionId = this.getAttribute('data-question-id');
-                document.getElementById('question_id').value = questionId;
-            });
-        });
-    </script>
-</body>
 </body>
 </html>

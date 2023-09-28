@@ -6,7 +6,7 @@
    
     if(!$conn ) { 
    die('Could not connect: ' . mysqli_error($conn));
-    } echo 'Connected successfully';
+    } 
 	// selecting data base
 	 
 	 $db= mysqli_select_db($conn,'Farming web');
@@ -16,7 +16,7 @@
 	 echo 'Select database first ';
 	
 	}else
-	 echo 'Database selected';
+
 	
 	 	  //mysqli_close($conn); ?> 
       </body> </html>

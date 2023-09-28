@@ -23,7 +23,7 @@ if (!isset($_SESSION['email']) || $_SESSION['role'] !== 'Farmers') {
          
          <a href="#"> profile</a>
          <a href="farmers problems">Probems</a>
-         <a href="#">Solve</a>
+         <a href="farmers problems.php">Solve</a>
          <a href="service with register.php">Services</a>
          <a href="logout.php">Logout</a>
       

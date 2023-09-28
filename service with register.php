@@ -38,14 +38,15 @@ while($row = mysqli_fetch_array($result))
 	
 </div>
 <div class="des">
-<br/>	<p style="color: #FF1014">For one day and one person(Price)</p><br/>
+<br/>	<p style="color: #FF1014"></p><br/>
 <p style="font-size: 30px">Rs.<?php echo($row['servicename']);?></p><br/>
-<p>Locations:<br/><?php echo($row['descrip']);?></p><br/>
-<p>Hotel Details:<br/><?php echo($row['place']);?></p><br/>
-<p>Description:<br/><?php echo($row['time']);?></p>
-<p>Description:<br/><?php echo($row['phone']);?></p>
+<p><br/><?php echo($row['descrip']);?></p><br/>
+<p><br/><?php echo($row['place']);?></p><br/>
+<p><br/><?php echo($row['time']);?></p>
+<p><br/><?php echo($row['phone']);?></p>
 
-<a href="data.html"> <button>Register</button></a>
+<a href="Farmer Register Service.php?servicename=<?php echo urlencode($servicename); ?>"> <button>Register</button></a>
+
 
 
 	
