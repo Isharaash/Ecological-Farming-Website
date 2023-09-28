@@ -39,7 +39,7 @@
             } else {
                 echo '<em>No reply yet.</em><br>';
             }
-            echo '<a href="#" class="question-link" data-question-id="' . $questionId . '">Select</a>';
+            echo '<a href="#" class="question-link" data-question-id="' . $questionId . '">Reply</a>';
             echo '</li>';
         }
 
@@ -66,6 +66,7 @@
                 e.preventDefault();
                 const questionId = this.getAttribute('data-question-id');
                 document.getElementById('question_id').value = questionId;
+               
             });
         });
     </script>

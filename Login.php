@@ -1,8 +1,3 @@
-<?php
-   include 'navbar.php';
-?>
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -14,7 +9,7 @@ if (count($_POST) > 0) {
     $email = $_POST["email"];
     $password = md5($_POST["password"]);
 
-    $sql = "SELECT email, role, fname, lname FROM register WHERE email='$email' AND password='$password'";
+    $sql = "SELECT email, role, fname, lname, country FROM register WHERE email='$email' AND password='$password'";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) == 1) {
@@ -23,7 +18,8 @@ if (count($_POST) > 0) {
         $_SESSION['email'] = $row['email'];
         $_SESSION['role'] = $row['role'];
         $_SESSION['fname'] = $row['fname'];
-        $_SESSION['lname'] = $row['lname']; // Assuming 'role' is the column for user roles
+        $_SESSION['lname'] = $row['lname'];
+        $_SESSION['country'] = $row['country']; // Assuming 'role' is the column for user roles
 
         // Redirect based on the user's role
         if ($row['role'] === 'Admin') {

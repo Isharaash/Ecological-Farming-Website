@@ -2,9 +2,10 @@
 // Start the session to access session variables
 session_start();
 
-// Check if the user is logged in and has the 'admin' role
+// Check if the user is logged in and has the 'Farmers' role
 if (!isset($_SESSION['email']) || $_SESSION['role'] !== 'Farmers') {
-    // Redirect to the login page if the user is not logged in or not an admin
+    
+    // Redirect to the login page if the user is not logged in or not a Farmer
     header("location: Login.php");
     exit(); // Terminate script execution
 }
@@ -13,17 +14,61 @@ if (!isset($_SESSION['email']) || $_SESSION['role'] !== 'Farmers') {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin Page</title>
-    <link rel="stylesheet" href="side bar farmer.css">
+    <title>Farmers Page</title>
+<style>
+	*{
+			padding: 0px;
+			margin:0px;
+			font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+		}
+	body {
+    font-family: "Lato", sans-serif;
+    background-color: darkslategray;
+}
+
+h1 {
+    text-align: center;
+	color: #FFFFFF;
+}
+
+
+  
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    opacity: 0.8;
+    background-color: #111;
+    padding-top: 20px;
+    font-size: 20px;
+	top: 10%;
+}
+  
+.sidenav a {
+    padding: 25px 6px 6px 32px;
+    text-decoration:dotted;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+	text-align: justify;
+	margin: 10px;
+}
+  
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+
+</style>
 </head>
 <body>
 <h1>Welcome, <?php echo $_SESSION['fname'] . ' ' . $_SESSION['lname']; ?> (Farmers)!</h1>
  
 <div class="sidenav">
          
-         <a href="#"> profile</a>
-         <a href="farmers problems">Probems</a>
-         <a href="farmers problems.php">Solve</a>
+         <a href="farmer Profile.php"> profile</a>
+         <a href="farmers problems.php">Probems</a>
+         <a href="Farmers show problems.php">Solve</a>
          <a href="service with register.php">Services</a>
          <a href="logout.php">Logout</a>
       
