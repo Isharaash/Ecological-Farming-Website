@@ -22,5 +22,8 @@ if (!isset($_SESSION['email']) || $_SESSION['role'] !== 'Farmers') {
     <!-- Admin-specific content goes here -->
     
     <a href="logout.php">Logout</a>
+
+
+
 </body>
 </html>

@@ -17,10 +17,11 @@ if (!isset($_SESSION['email']) || $_SESSION['role'] !== 'Admin') {
 </head>
 <body>
 <h1>Welcome, <?php echo $_SESSION['fname'] . ' ' . $_SESSION['lname']; ?> (Admin)!</h1>
-    <p>This is the admin-only page.</p>
+<h1>Employee Questions</h1>
     
-    <!-- Admin-specific content goes here -->
-    
-    <a href="logout.php">Logout</a>
+   
+
+
+
 </body>
 </html>
