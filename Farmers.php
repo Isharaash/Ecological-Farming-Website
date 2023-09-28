@@ -14,14 +14,23 @@ if (!isset($_SESSION['email']) || $_SESSION['role'] !== 'Farmers') {
 <html>
 <head>
     <title>Admin Page</title>
+    <link rel="stylesheet" href="side bar farmer.css">
 </head>
 <body>
 <h1>Welcome, <?php echo $_SESSION['fname'] . ' ' . $_SESSION['lname']; ?> (Farmers)!</h1>
-    <p>This is the admin-only page.</p>
+ 
+<div class="sidenav">
+         
+         <a href="#"> profile</a>
+         <a href="farmers problems">Probems</a>
+         <a href="#">Solve</a>
+         <a href="service with register.php">Services</a>
+         <a href="logout.php">Logout</a>
+      
+      
+     </div>
     
-    <!-- Admin-specific content goes here -->
-    
-    <a href="logout.php">Logout</a>
+
 
 
 

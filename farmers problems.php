@@ -1,4 +1,6 @@
 
+
+
 <?php
 // Start the session to access session variables
 session_start();
@@ -9,6 +11,7 @@ if (!isset($_SESSION['email']) || $_SESSION['role'] !== 'Farmers') {
     header("location: Login.php");
     exit(); // Terminate script execution
 }
+
 ?>
 
 
