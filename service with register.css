@@ -4,7 +4,7 @@
 }
 	body{
 font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
-		background: #7046FF;
+		background: hsl(254, 100%, 64%);
 }
 			h1{
 			text-align: center;
@@ -47,23 +47,4 @@ button:hover{
 	color:white;
 	transition:0.5s;
 }
-		.search-bar{
-			left: 80%;
-			position: absolute;
-			bottom: 90%;
-			background: #FFF8F8;
-			padding: 10px;
-			border-radius: 20px;
-			
-			
-		}
-		.search-bar input{
-			padding: 7px;
-			border-radius: 5px;
-			background: rgb(182,211,223);
-			padding-right: 20px;
-			border: none;
-			font-size: 13px;
-			
-		}
 		

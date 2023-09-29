@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -9,7 +11,7 @@ if (count($_POST) > 0) {
     $email = $_POST["email"];
     $password = md5($_POST["password"]);
 
-    $sql = "SELECT email, role, fname, lname, country FROM register WHERE email='$email' AND password='$password'";
+    $sql = "SELECT email, role, fname, lname FROM register WHERE email='$email' AND password='$password'";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) == 1) {
@@ -19,7 +21,7 @@ if (count($_POST) > 0) {
         $_SESSION['role'] = $row['role'];
         $_SESSION['fname'] = $row['fname'];
         $_SESSION['lname'] = $row['lname'];
-        $_SESSION['country'] = $row['country']; // Assuming 'role' is the column for user roles
+  // Assuming 'role' is the column for user roles
 
         // Redirect based on the user's role
         if ($row['role'] === 'Admin') {
@@ -53,35 +55,35 @@ if (count($_POST) > 0) {
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Login Form</title>
 	
-	
+<link rel="stylesheet" href="register.css">
 	
 </head>
 	
 
 <body>
-	
-
-<div class="login">
-<h1> Login Form </h1>
-	</div>
-	<div class="login-form">
-	<form id="login" method="post" action=""  onSubmit="">
-
-  
-   <p> User Name:</p>
-      <input type="text" name="email" placeholder="Username"/>
-    
+<?php
+include("navbar.php")
+?>
  
-  
-    <p>Password:</p>
-      <input type="password" name="password" placeholder="Password"/>
-		
+<div class="main">
 
-   <div class="button">
-    <input type="Submit" name="Login" value="Login" />
+<div class="form">
+        <form id="login" method="post" action=""  onSubmit="">
+        <h2>LOGIN HERE</h2>
+        <input type="email" name="email" placeholder="Enter Email Here">
+        <input type="password" name="password" placeholder="Enter Password Here">
+        <button class="btnn" type="Submit"><a>Login</a></button>
+    </form>
+        <p class="link">Don't have an account<br>
+        <a href="register2.php">Sign up </a> here</a></p>
+       
 
-</form>
-	</div>
-	
+      
+
+    </div>
+
+    </div>
+
+
 </body>
 </html>

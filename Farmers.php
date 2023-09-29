@@ -62,7 +62,7 @@ h1 {
 </style>
 </head>
 <body>
-<h1>Welcome, <?php echo $_SESSION['fname'] . ' ' . $_SESSION['lname']; ?> (Farmers)!</h1>
+<h1>Welcome, Farmer <?php echo $_SESSION['fname'] . ' ' . $_SESSION['lname']; ?></h1>
  
 <div class="sidenav">
          

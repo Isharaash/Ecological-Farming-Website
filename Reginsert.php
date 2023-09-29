@@ -12,12 +12,12 @@
         
        $fname=$_POST['fname'];
        $lname=$_POST['lname'];
-       $country=$_POST['country'];
+       $address=$_POST['address'];
        $email=$_POST['email'];
        $password=md5($_POST['password']);
        $role=$_POST['role'];
        
-       $sql="INSERT INTO register". "(fname,lname,country, email, password, role)" . "VALUES('$fname','$lname','$country', '$email','$password','$role')";
+       $sql="INSERT INTO register". "(fname,lname,address, email, password, role)" . "VALUES('$fname','$lname','$address', '$email','$password','$role')";
         
        $results= mysqli_query($conn, $sql);
         
@@ -28,7 +28,7 @@
        else
        {
            echo "Entered data successfully\n";
-            header("location:");
+            header("location:register.html");
        }
        
     } else{
