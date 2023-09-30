@@ -22,12 +22,15 @@
         
      if(!$results){
            die('Could not enter dara:'.mysql_error($conn));
-            header("location:service.html");
+            header("location: Farmer Register Service.php");
        }
        else
        {
-           echo "Entered data successfully\n";
-            header("location:");
+        echo '<script>alert("Detilas submitted successfully.");</script>';
+            
+
+        echo '<meta http-equiv="refresh" content="2;url=service with register.php">';
+        exit(); 
        }
        
     } else{

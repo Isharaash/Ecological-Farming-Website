@@ -27,8 +27,13 @@
        }
        else
        {
-           echo "Entered data successfully\n";
-            header("location:Add new offices.php");
+          
+        echo '<script>alert("Register successfully.");</script>';
+            
+         
+        echo '<meta http-equiv="refresh" content="2;url=Add new offices.php">';
+        exit(); 
+
        }
        
     } else{

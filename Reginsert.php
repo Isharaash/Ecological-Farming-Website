@@ -28,7 +28,7 @@
        else
        {
            echo "Entered data successfully\n";
-            header("location:register2.php");
+            header("location:Login.php");
        }
        
     } else{

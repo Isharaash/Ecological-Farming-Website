@@ -25,7 +25,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param("is", $user_id, $question_text);
 
         if ($stmt->execute()) {
-            echo "Question submitted successfully.";
+            echo '<script>alert("Question submitted successfully.");</script>';
+
+            echo '<meta http-equiv="refresh" content="2;url=farmers problems.php">';
+            exit();
+          
         } else {
             echo "Error: " . $stmt->error;
         }

@@ -28,6 +28,7 @@ if (count($_POST) > 0) {
           
         
             header("location: Admin.php"); 
+            
         }
 
      else if ($row['role'] === 'Field Officers') {
@@ -43,6 +44,8 @@ if (count($_POST) > 0) {
     }
 
     echo "<script type='text/javascript'>alert('$msg');</script>";
+
+
 }
 ?>
 
@@ -61,6 +64,9 @@ if (count($_POST) > 0) {
 	
 
 <body>
+
+
+      
 <?php
 include("navbar.php")
 ?>

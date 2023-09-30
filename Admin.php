@@ -50,7 +50,7 @@ h1 {
     color: #818181;
     display: block;
 	text-align: justify;
-	margin: 10px;
+	margin: 8px;
 }
   
 .sidenav a:hover {
@@ -67,6 +67,7 @@ h1 {
          
         <a href="Admin Profile.php"> Profile</a>
          <a href="Admin Question.php">Solve</a>
+         <a href="Admin add Service.php">Add Service</a>
          <a href="Admin services.php">Programe</a>
          <a href="Admin register list.php">Registation List</a>
          <a href="Add new offices.php">Add Officers</a>

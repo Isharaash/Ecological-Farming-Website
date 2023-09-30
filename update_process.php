@@ -25,6 +25,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (mysqli_query($conn, $update_query)) {
         // Update successful
+
+        echo '<script>alert("Update successfully.");</script>';
+            
+
+        echo '<meta http-equiv="refresh" content="2;url=Admin services.php">';
+        exit(); 
+
+
         header("Location: Admin services.php"); // Redirect back to the list of packages
         exit();
     } else {

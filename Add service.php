@@ -23,12 +23,15 @@
         
      if(!$results){
            die('Could not enter dara:'.mysql_error($conn));
-            header("location:service.html");
+            header("location:Admin add Service.php");
        }
        else
        {
-           echo "Entered data successfully\n";
-            header("location:");
+        echo '<script>alert("Data submitted successfully.");</script>';
+            
+
+        echo '<meta http-equiv="refresh" content="2;url=Admin add Service.php">';
+        exit();
        }
        
     } else{

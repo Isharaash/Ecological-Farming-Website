@@ -128,6 +128,9 @@ body {
     
     
     </style>
+
+
+
 </head>
 <body>
     
@@ -135,48 +138,69 @@ body {
 
 
 
+<section class="container">
+    <header>Problems</header>
+    <form name="createservice" class="form" method="post" action="Service Register.php" onsubmit="return validateForm();">
 
-     <section class="container">
-        <header>Problems</header>
-        <form  name="createservice" class="form" method="post" action="Service Register.php">
-
-          <div class="input-box">
+        <div class="input-box">
             <label>Your Name</label>
-            <input type="text" name="name"  value="<?php echo $_SESSION['fname'] . ' ' . $_SESSION['lname']; ?>" readonly>
-          </div>
+            <input type="text" name="name" value="<?php echo $_SESSION['fname'] . ' ' . $_SESSION['lname']; ?>" readonly>
+        </div>
 
-          <div class="input-box">
+        <div class="input-box">
             <label>Program Name:</label>
-            <input type="text" name="proname" placeholder=" Programe name" value="<?php echo htmlspecialchars($selectedServiceName); ?>" readonly>
-     
-          </div>
+            <input type="text" name="proname" placeholder="Programe name" value="<?php echo htmlspecialchars($selectedServiceName); ?>" readonly>
+        </div>
 
-          <div class="input-box">
-            <label>Your Adress:</label>
-            <input type="text" name="address" placeholder="Enter Your Address"/>
-     
-          </div>
+        <div class="input-box">
+            <label>Your Address:</label>
+            <input type="text" name="address" placeholder="Enter Your Address" id="address">
+        </div>
 
-
-          <div class="input-box">
+        <div class="input-box">
             <label>E-mail</label>
-            <input type="text" name="mail" placeholder="Your E-mail" />
-          </div>
+            <input type="text" name="mail" placeholder="Your E-mail" id="email">
+        </div>
 
-          <div class="input-box">
-            <label> Phone:</label>
-            <input type="tel" name="phone" placeholder="Enter Your Phone"/>
-          </div>
-          <div class="input-box">
-  <a href="javascript:history.back()" class="back-button">Back</a>
-</div>
-         <button type="submit" name="submit" value="Submit">Submit</button>
-      
-        </form>
-      </section>
+        <div class="input-box">
+            <label>Phone:</label>
+            <input type="tel" name="phone" placeholder="Enter Your Phone" id="phone">
+        </div>
+
+        <div class="input-box">
+            <a href="javascript:history.back()" class="back-button">Back</a>
+        </div>
+
+        <button type="submit" name="submit" value="Submit">Submit</button>
+
+    </form>
+</section>
 
 
 
+
+<script>
+    function validateForm() {
+        var address = document.getElementById("address").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+
+        // Simple validation example
+        if (address === "") {
+            alert("Please enter your address.");
+            return false;
+        }
+
+        if (email === "") {
+            alert("Please enter your email.");
+            return false;
+        }
+
+        // You can add more validation checks here for email format, phone format, etc.
+
+        return true; // If all validations pass, the form will submit.
+    }
+</script>
       
 
 </body>

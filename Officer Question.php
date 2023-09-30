@@ -195,23 +195,23 @@ include("Field Officers.php")
 
 
     <section class="container">
-        <header>Reply</header>
-        <form  action="officer_reply.php" method="post" class="form">
+    <header>Reply</header>
+    <form action="officer_reply.php" method="post" class="form" onsubmit="return validateForm();">
 
-          <div class="input-box">
+        <div class="input-box">
             <label>Question ID</label>
             <input type="number" name="question_id" id="question_id">
-          </div>
-          <div class="input-box">
+        </div>
+
+        <div class="input-box">
             <label>Reply</label>
-            <textarea name="reply_text"></textarea>
-          </div>
+            <textarea name="reply_text" id="reply_text"></textarea>
+        </div>
 
+        <button type="submit" value="Submit Reply">Submit</button>
 
-         <button type="submit" value="Submit Reply">Submit</button>
-       
-        </form>
-      </section>
+    </form>
+</section>
 
 
 
@@ -234,6 +234,30 @@ include("Field Officers.php")
                
             });
         });
+
+    function validateForm() {
+        var questionId = document.getElementById("question_id").value;
+        var replyText = document.getElementById("reply_text").value;
+
+        // Simple validation example
+        if (questionId === "") {
+            alert("Please enter a Question ID.");
+            return false;
+        }
+
+        if (replyText === "") {
+            alert("Please enter a reply.");
+            return false;
+        }
+
+        // You can add more validation checks here, such as checking the format of the question ID.
+
+        return true; // If all validations pass, the form will submit.
+    }
+
+
+
+
     </script>
 </body>
 </body>

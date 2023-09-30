@@ -16,8 +16,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("is", $question_id, $reply_text);
 
     if ($stmt->execute()) {
-        echo "Reply submitted successfully.";
-        header("Location: Admin services.php"); 
+        echo '<script>alert("Reply submitted successfully.");</script>';
+            
+
+        echo '<meta http-equiv="refresh" content="2;url=Admin Question.php">';
+        exit(); 
     } else {
         echo "Error: " . $stmt->error;
     }
