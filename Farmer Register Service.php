@@ -139,7 +139,7 @@ body {
 
 
 <section class="container">
-    <header>Problems</header>
+    <header>Service Registration</header>
     <form name="createservice" class="form" method="post" action="Service Register.php" onsubmit="return validateForm();">
 
         <div class="input-box">

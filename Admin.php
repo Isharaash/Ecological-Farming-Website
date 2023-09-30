@@ -66,10 +66,10 @@ h1 {
 <div class="sidenav">
          
         <a href="Admin Profile.php"> Profile</a>
-         <a href="Admin Question.php">Solve</a>
+         <a href="Admin Question.php">Problems</a>
          <a href="Admin add Service.php">Add Service</a>
-         <a href="Admin services.php">Programe</a>
-         <a href="Admin register list.php">Registation List</a>
+         <a href="Admin services.php">Program</a>
+         <a href="Admin register list.php">Registration List</a>
          <a href="Add new offices.php">Add Officers</a>
          <a href="Add new Admin.php">Add Admins</a>
          <a href="logout.php">Logout</a>

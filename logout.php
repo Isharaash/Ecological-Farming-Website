@@ -2,8 +2,14 @@
 
 session_start();
 if(session_destroy()){
-	echo'<h1>You Have been Successfully Logout</h1>';
-	header("location:Login.php");
+
+	echo '<script>alert("You Have been Successfully Logout.");</script>';
+            
+
+	echo '<meta http-equiv="refresh" content="2;url=Login.php">';
+	exit(); 
+
+
 }
 ?>
 

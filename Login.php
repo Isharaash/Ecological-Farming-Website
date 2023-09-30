@@ -25,19 +25,28 @@ if (count($_POST) > 0) {
 
         // Redirect based on the user's role
         if ($row['role'] === 'Admin') {
-          
+            echo '<script>alert("Admin login successfully.");</script>';
+            echo '<meta http-equiv="refresh" content="2;url=Admin.php">';
+            exit(); 
         
-            header("location: Admin.php"); 
+         
             
         }
 
      else if ($row['role'] === 'Field Officers') {
-        header("location: Field Officers.php");
+        echo '<script>alert("Field Officers login successfully.");</script>';
+        echo '<meta http-equiv="refresh" content="2;url= Field Officers.php">';
+        exit(); 
+       
      }
 
       else if ($row['role'] === 'Farmers') {
-         header("location: Farmers.php");
 
+        echo '<script>alert("Farmer login successfully.");</script>';
+            echo '<meta http-equiv="refresh" content="2;url=Farmers.php">';
+            exit(); 
+        
+         
 } 
     } else {
         $msg = "Your Login Name or Password is invalid";
@@ -59,6 +68,25 @@ if (count($_POST) > 0) {
 <title>Login Form</title>
 	
 <link rel="stylesheet" href="register.css">
+
+<script>
+        function validateForm() {
+            var email = document.forms["login"]["email"].value;
+            var password = document.forms["login"]["password"].value;
+
+            if (email == "") {
+                alert("Email must be filled out");
+                return false;
+            }
+
+            if (password == "") {
+                alert("Password must be filled out");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
 	
 </head>
 	
@@ -74,18 +102,14 @@ include("navbar.php")
 <div class="main">
 
 <div class="form">
-        <form id="login" method="post" action=""  onSubmit="">
-        <h2>LOGIN HERE</h2>
-        <input type="email" name="email" placeholder="Enter Email Here">
-        <input type="password" name="password" placeholder="Enter Password Here">
-        <button class="btnn" type="Submit"><a>Login</a></button>
-    </form>
+        <form id="login" method="post" action="" onSubmit="return validateForm();">
+            <h2>LOGIN HERE</h2>
+            <input type="email" name="email" placeholder="Enter Email Here">
+            <input type="password" name="password" placeholder="Enter Password Here">
+            <button class="btnn" type="submit">Login</button>
+        </form>
         <p class="link">Don't have an account<br>
-        <a href="register2.php">Sign up </a> here</a></p>
-       
-
-      
-
+        <a href="register2.php">Sign up</a> here</p>
     </div>
 
     </div>

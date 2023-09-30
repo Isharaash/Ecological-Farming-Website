@@ -15,7 +15,7 @@ include("Admin.php")
 
 
 <section class="container">
-    <header>Add Admin</header>
+    <header>Add Officers</header>
     <form action="Adminregister.php" method="post" class="form" onsubmit="return validateForm();">
 
         <div class="input-box">

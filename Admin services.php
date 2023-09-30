@@ -82,7 +82,7 @@ button:hover{
 
 ?>
 <h1>Service</h1>
-	<?php
+<?php 
 while($row = mysqli_fetch_array($result))
   {
 	  
@@ -98,16 +98,17 @@ while($row = mysqli_fetch_array($result))
 <div class="cards">
 
 <div class="title">
-  <h1 ><?php echo($row['place']);?></h1>
+<h1 ><?php echo($row['servicename']);?></h1>
+
 	
 </div>
 <div class="des">
-<br/>	<p style="color: #FF1014"></p><br/>
-<p style="font-size: 30px">Rs.<?php echo($row['servicename']);?></p><br/>
-<p><br/><?php echo($row['descrip']);?></p><br/>
-<p><br/><?php echo($row['place']);?></p><br/>
+<p><br/><?php echo($row['descrip']);?></p>
+<p><br/><?php echo($row['place']);?></p>
 <p><br/><?php echo($row['time']);?></p>
 <p><br/><?php echo($row['phone']);?></p><br/>
+
+
 
 <a href="update_package.php?id=<?php echo $row['id']; ?>" class="update-button">Update</a><br><br>
 <a href="delete_package.php?id=<?php echo $row['id']; ?>" class="delete-button">Delete</a>

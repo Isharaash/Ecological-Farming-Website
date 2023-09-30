@@ -68,7 +68,7 @@ h1 {
          
          <a href="farmer Profile.php"> profile</a>
          <a href="farmers problems.php">Probems</a>
-         <a href="Farmers show problems.php">Solve</a>
+         <a href="Farmers show problems.php">Solution</a>
          <a href="service with register.php">Services</a>
          <a href="logout.php">Logout</a>
       

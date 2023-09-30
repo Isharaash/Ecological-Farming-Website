@@ -97,14 +97,25 @@ include("Field Officers.php")
    
 
 
-    <div class="search">
-    <form method="GET" action="">
-  
-    <input class="srch" type="text" name="search" id="search" placeholder="Search by Program Name">
-    <input type="submit" value="Search" class="btn">
-</form>
-
+<div class="search">
+    <form method="GET" action="" onsubmit="return validateForm()">
+        <input class="srch" type="text" name="search" id="search" placeholder="Search by Program Name">
+        <input type="submit" value="Search" class="btn">
+    </form>
 </div>
+
+<script>
+    function validateForm() {
+        var searchInput = document.getElementById('search').value;
+        if (searchInput.trim() === '') {
+            alert('Please enter a search term.');
+            return false; // Prevent the form from submitting
+        }
+        // You can add more validation here if needed
+        return true; // Allow the form to submit
+    }
+</script>
+
 
 <div class="table_responsive">
 

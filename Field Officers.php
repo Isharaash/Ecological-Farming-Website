@@ -66,9 +66,9 @@ h1 {
 <div class="sidenav">
          
          <a href="Officers Profile.php"> profile</a>
-         <a href="Officer Question.php">Solve</a>
-         <a href="service for officers.php">Programe</a>
-         <a href="programe register list.php">Registation List</a>
+         <a href="Officer Question.php">Problems</a>
+         <a href="service for officers.php">Program</a>
+         <a href="programe register list.php">Registration List</a>
          <a href="logout.php">Logout</a>
       
       

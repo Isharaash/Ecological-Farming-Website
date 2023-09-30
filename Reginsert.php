@@ -27,8 +27,10 @@
        }
        else
        {
-           echo "Entered data successfully\n";
-            header("location:Login.php");
+        echo '<script>alert("Farmer register successfully.");</script>';
+        echo '<meta http-equiv="refresh" content="2;url=Login.php">';
+        exit(); 
+           
        }
        
     } else{

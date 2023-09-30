@@ -139,7 +139,7 @@ if (isset($_GET['id'])) {
         // Display the form for updating the package
         ?>
         <div class="container">
-            <header>Edit Package</header>
+            <header>Edit Service</header>
             <div class="form">
                 <form method="POST" action="update_process.php">
                     <input type="hidden" name="id" value="<?php echo $packageId; ?>">

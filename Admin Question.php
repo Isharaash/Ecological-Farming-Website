@@ -66,7 +66,7 @@ include("Admin.php")
 
 
       .container {
-  position: relative;
+  position: absolute;
   max-width: 300px;
   width: 50%;
   background: #fff;
@@ -74,7 +74,7 @@ include("Admin.php")
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   margin-bottom: 0px;
-  top: -1390px;
+  top: 50px;
   left:850px;
 }
 .container header {
