@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->execute()) {
         echo "Reply submitted successfully.";
-        header("Location: Admin services.php"); 
+        header("Location: officer Question.php"); 
     } else {
         echo "Error: " . $stmt->error;
     }

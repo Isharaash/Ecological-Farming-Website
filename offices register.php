@@ -23,12 +23,12 @@
         
      if(!$results){
            die('Could not enter dara:'.mysql_error($conn));
-            header("location:register2.php");
+            header("location:Add new offices.php");
        }
        else
        {
            echo "Entered data successfully\n";
-            header("location:register2.php");
+            header("location:Add new offices.php");
        }
        
     } else{

@@ -1,10 +1,67 @@
+
+<?php
+include("Farmers.php")
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <title> Questions</title>
+    <style type="text/css">
+      
+        /* Reset some default styles for better consistency */
+       
+
+
+
+        /* Style for the list container */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-left: 200px;
+            width: 600px; /* Adjust as needed */
+    height: auto;
+ 
+        }
+
+        /* Style for each list item */
+        li {
+            background-color: #fff;
+            margin-bottom: 20px;
+             border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-left: 10px;
+        }
+
+        /* Style for the user's name */
+        .user-name {
+            font-weight: bold;
+            color: #007BFF;
+        }
+
+        /* Style for the question text */
+        .question-text {
+            margin-top: 10px;
+            color: #333;
+        }
+
+        /* Style for the reply text */
+        .reply-text {
+            margin-top: 10px;
+            color: #FF5733;
+        }
+
+        /* Style for "No reply yet" */
+        .no-reply {
+            font-style: italic;
+            color: #888;
+        }
+    </style>
 </head>
 <body>
-    <h1>Reply Questions</h1>
+    <h1>Problems</h1>
 
     <!-- List of Questions and Replies -->
     <ul>

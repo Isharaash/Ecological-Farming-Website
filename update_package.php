@@ -1,9 +1,119 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>packages list</title>
-<link rel="stylesheet" href="service with register.css">
+    <meta charset="utf-8">
+    <title>packages list</title>
+    <style type="text/css">
+      * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background: rgb(20, 15, 49);
+}
+    
+    h1{
+  color: #ff7200;
+  height: 100vh;
+  padding-top: -20px;
+  margin-top: 5px;
+  margin-left: -120px;
+}
+
+
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.container header {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 600;
+  text-align: center;
+}
+.container .form {
+  margin-top: 30px;
+}
+ .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+.input-box label {
+  color: #333;
+}
+
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.input-box textarea{
+
+  position: relative;
+  height: 230px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+
+}
+.form button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgb(130, 106, 251);
+}
+.form button:hover {
+  background: rgb(88, 56, 250);
+}
+
+ 
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    </style>
 </head>
 
 <body>
@@ -26,18 +136,29 @@ if (isset($_GET['id'])) {
         $time = $row['time'];
         $phone = $row['phone'];
 
-        // Add a form for updating the package
-        echo '<form method="POST" action="update_process.php">';
-        echo '<input type="hidden" name="id" value="' . $packageId . '">';
-        echo 'Service Name: <input type="text" name="servicename" value="' . $servicename . '"><br>';
-        echo 'Description: <textarea name="descrip">' . $escrip . '</textarea><br>';
-        echo 'Place: <input type="text" name="place" value="' . $place . '"><br>';
-        echo 'Date: <input type="date" name="date" value="' . $date . '"><br>';
-        echo 'Time: <input type="time" name="time" value="' . $time . '"><br>';
-        echo 'Phone: <input type="text" name="phone" value="' . $phone . '"><br>';
-        
-        echo '<input type="submit" value="Update">';
-        echo '</form>';
+        // Display the form for updating the package
+        ?>
+        <div class="container">
+            <header>Edit Package</header>
+            <div class="form">
+                <form method="POST" action="update_process.php">
+                    <input type="hidden" name="id" value="<?php echo $packageId; ?>">
+                    <div class="input-box">
+                        Service Name: <input type="text" name="servicename" value="<?php echo $servicename; ?>"><br>
+                        Description: <textarea name="descrip"><?php echo $escrip; ?></textarea><br>
+                        Place: <input type="text" name="place" value="<?php echo $place; ?>"><br>
+                        Date: <input type="date" name="date" value="<?php echo $date; ?>"><br>
+                        Time: <input type="time" name="time" value="<?php echo $time; ?>"><br>
+                        Phone: <input type="text" name="phone" value="<?php echo $phone; ?>"><br>
+                    </div>
+                    <div class="input-box">
+  <a href="javascript:history.back()" class="back-button">Back</a>
+</div>
+                    <button type="submit">Update</button>
+                </form>
+            </div>
+        </div>
+        <?php
     } else {
         echo 'Package not found.';
     }
@@ -47,8 +168,5 @@ if (isset($_GET['id'])) {
 
 mysqli_close($conn);
 ?>
-
-
-<body>
 </body>
 </html>

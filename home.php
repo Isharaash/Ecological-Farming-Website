@@ -12,8 +12,8 @@
 	left:auto;
 	transform:none;
 	width: 100%;
-	color:#000;
-	font-size: 150px;
+	color:white;
+	font-size: 70px;
 	text-decoration:overline;
 	letter-spacing:2px;
 
@@ -22,11 +22,11 @@
 .text2{
 	text-align: center;
 	position: absolute;
-	top: 500px;
-	left: 370px;
+	top: 350px;
+	left: 300px;
 	width: 50%;
 	color: #FFF;
-	font-size: 100px;
+	font-size: 50px;
 	top margin: 100px;
 	letter-spacing:2px;
 
@@ -54,8 +54,8 @@ include("navbar.php")
 
 	
 	
-  <div class="text1"></div>
- <div class="text2"><b style="color: #FF0004"></b> </div>
+  <div class="text1">WelCome</div>
+ <div class="text2"><b style="color: #FF0004"></b>EcoAgriSriLanka.com </div>
 </div>
 
 

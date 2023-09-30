@@ -1,14 +1,4 @@
 
-
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My HTML Page</title>
-   
-</head>
-<body>
-    
 <?php
 // Start the session to access session variables
 session_start();
@@ -23,12 +13,132 @@ $selectedServiceName = urldecode($_GET['servicename']);
 ?>
 
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My HTML Page</title>
+    <style type="text/css">
+      * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background: rgb(20, 15, 49);
+}
+    
+    h1{
+  color: #ff7200;
+  height: 100vh;
+  padding-top: -20px;
+  margin-top: 5px;
+  margin-left: -120px;
+}
+
+
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.container header {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 600;
+  text-align: center;
+}
+.container .form {
+  margin-top: 30px;
+}
+ .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+.input-box label {
+  color: #333;
+}
+
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.input-box textarea{
+
+  position: relative;
+  height: 230px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+
+}
+.form button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgb(130, 106, 251);
+}
+.form button:hover {
+  background: rgb(88, 56, 250);
+}
+
+ 
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    </style>
+</head>
+<body>
+    
+
+
 
 
 
      <section class="container">
         <header>Problems</header>
-        <form id="form1" name="createservice" method="post" action="Service Register.php">
+        <form  name="createservice" class="form" method="post" action="Service Register.php">
 
           <div class="input-box">
             <label>Your Name</label>
@@ -54,18 +164,20 @@ $selectedServiceName = urldecode($_GET['servicename']);
           </div>
 
           <div class="input-box">
-            <label> Question:</label>
+            <label> Phone:</label>
             <input type="tel" name="phone" placeholder="Enter Your Phone"/>
           </div>
-
-         <button input type="submit" name="submit" value="Submit">Submit</button>
-       
+          <div class="input-box">
+  <a href="javascript:history.back()" class="back-button">Back</a>
+</div>
+         <button type="submit" name="submit" value="Submit">Submit</button>
+      
         </form>
       </section>
 
 
 
-
+      
 
 </body>
 </html>

@@ -56,18 +56,17 @@
 </head>
 <body>
     <nav>
-        <div class="icon">DreamTour<b style="color: #FF0004">Sri Lanka</b></div>
+        <div class="icon">EcoAgri<b style="color: #FF0004">Sri Lanka</b></div>
     
     <ol>
     <li><a href="home.php">Home</a></li>
-    <li><a href="about.php">About</a></li>
+    <li><a href="About.php">About</a></li>
     <li><a href="user services.php">Services</a></li>
-    <li><a href="contact3.php">Contact</a></li>
+    <li><a href="conn.php">Contact</a></li>
     <li><a href="Login.php">Login Here</a></li>
     </ol>
     </nav>
     
- 
 
 
 

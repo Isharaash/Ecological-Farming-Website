@@ -14,7 +14,7 @@ include("Farmers.php")
 
 <div class="form">
     
-        <h2>User Profile</h2>
+        <h2>Profile</h2>
         
    
         <p class="link">First Name: <?php echo $_SESSION['fname'];?><br><br>

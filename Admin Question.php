@@ -1,6 +1,6 @@
 
 <?php
-include("Field Officers.php")
+include("Admin.php")
 ?>
 
 <!DOCTYPE html>
@@ -196,7 +196,7 @@ include("Field Officers.php")
 
     <section class="container">
         <header>Reply</header>
-        <form  action="officer_reply.php" method="post" class="form">
+        <form  action="admin_reply.php" method="post" class="form">
 
           <div class="input-box">
             <label>Question ID</label>

@@ -1,5 +1,5 @@
 <?php
-include("Farmers.php")
+include("Field Officers.php")
 ?>
 
 
@@ -106,9 +106,7 @@ while($row = mysqli_fetch_array($result))
 <p><br/><?php echo($row['place']);?></p>
 <p><br/><?php echo($row['time']);?></p>
 <p><br/><?php echo($row['phone']);?></p><br/>
-<p style="color: #FF1014"> If you want to participate <br>please register Here...</p>
 
-<a href="Farmer Register Service.php?servicename=<?php echo urlencode($servicename); ?>"> <button>Register</button></a>
 
 
 

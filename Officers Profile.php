@@ -1,27 +1,28 @@
-<?php
-// Start the session to access session variables
-session_start();
 
-// Check if the user is logged in and has the 'Farmers' role
-if (!isset($_SESSION['email']) || $_SESSION['role'] !== 'Field Officers') {
-    
-    // Redirect to the login page if the user is not logged in or not a Farmer
-    header("location: Login.php");
-    exit(); // Terminate script execution
-}
+<?php
+include("Field Officers.php")
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
     <title>Farmer's Page</title>
+    <link rel="stylesheet" href="profile.css">
 </head>
 <body>
-<h1>Welcome, <?php echo $_SESSION['fname'] . ' ' . $_SESSION['lname']; ?> (Farmers)!</h1>
-<p>First Name: <?php echo $_SESSION['fname']; ?> </p>
-<p>Last Name: <?php echo $_SESSION['lname']; ?> </p>
 
-<p>E-mail: <?php echo $_SESSION['email'];?> </p>
+<div class="form">
+    
+        <h2>Profile</h2>
+        
+   
+        <p class="link">First Name: <?php echo $_SESSION['fname'];?><br><br>
+        Last Name:  <?php echo $_SESSION['lname']; ?> <br><br>
+        E-mail:     <?php echo $_SESSION['email'];?>
+
+   
+
+    </div>
 
 
 </body>
